@@ -19,19 +19,21 @@
 ## Humanoid Robot Walking Algorithm:
 
 ### 1- Initialize the System
-  - Attach each servo to its corresponding pin.
-  - set startTime to current time using millis().
+- Attach each servo to its corresponding pin.
+- Set startTime to current time using millis().
+
 ### 2- Begin Walking Phase (First 2 Seconds)
-  -Phase 1: Forward Motion
-    -Incrementally move all servos from 0° to 180°.
-    -Each small step changes the angle by 1° with a 5ms delay.
-    -This simulates the robot limbs moving forward.
-  -Phase 2: Backward Motion
-    -Move all servos back from 180° to 0° in reverse steps.
-    -Again, each movement changes the angle by 1° every 5ms.
-    -This simulates the limbs returning to the original position.
-### 3-After 2 Seconds (Stop Phase)
-  -All servos are set to 90°, the rest position.
-  -This halts movement and centers all joints.
-  -Movement stays in this fixed position until the board is reset.
+- **Phase 1: Forward Motion**
+  - Incrementally move all servos from 0° to 180°.
+  - Each small step changes the angle by 1° with a 5ms delay.
+  - This simulates the robot limbs moving forward.
+- **Phase 2: Backward Motion**
+  - Move all servos back from 180° to 0° in reverse steps.
+  - Again, each movement changes the angle by 1° every 5ms.
+  - This simulates the limbs returning to the original position.
+
+### 3- After 2 Seconds (Stop Phase)
+- All servos are set to 90°, the rest position.
+- This halts movement and centers all joints.
+- Movement stays in this fixed position until the board is reset.
 
